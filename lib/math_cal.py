@@ -1,4 +1,4 @@
-"""this extension try to enchance the function of the calculator"""
+"""this extension try to enhance the function of the calculator"""
 
 from lib import basic_cal
 import math

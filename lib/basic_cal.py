@@ -5,7 +5,7 @@ class Calculator(object):
     def __init__(self):
         self.stack = []
         self.expressions = []
-        self.operator_list = {'+': 2, '-': 2, '*': 1, '/': 1, '(': -1, ')': -1, '^': 0}
+        self.operator_list = {'+': 2, '-': 2, '*': 1, '/': 1, '(': -1, ')': -1, '^': 0, ',': -1}
         self.operate = {'+': "_add_it", '-': "_minus_it", '*': "_multiply_it", '/': "_divide_it",
                         '^': "_pow_it"}
         self.previous_answer = 0

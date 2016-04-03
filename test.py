@@ -18,6 +18,7 @@ class MyTest(unittest.TestCase):
         self.assertEqual(first=calculator.execute_it("1+(1*1)"), second=2.0)
         self.assertEqual(first=calculator.execute_it("sin(90)"), second=1.0)
         self.assertEqual(first=calculator.execute_it("cos(60)"), second=0.5000000000000001)
+        self.assertEqual(first=calculator.execute_it("log(10,100)"), second=2.0)
 
 
 if __name__ == "__main__":

@@ -1,9 +1,9 @@
 # pyCalculator
 
-#Description 
+##Description 
 pyCalculator is a little practice to test my basic skills of programming a python script.
 
-#Updates
+##Updates
 - update-2016/4/2
 
  upload the project 

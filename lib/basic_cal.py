@@ -33,6 +33,10 @@ class Calculator(object):
     def _pow_it(x, y):
         return x ** y
 
+    def _pre_ans(self):
+        answer = self.previous_answer
+        return str(answer)
+
     def load_expressions(self, expressions):
         temp = ""
         i = 0
@@ -87,7 +91,7 @@ class Calculator(object):
         while True:
             try:
                 temp = self.expressions.pop()
-                if temp not in self.operator_list:
+                if temp not in self.operator_list and temp != "ans":
                     output.append(temp)
                 elif temp == '(':
                     temp_stack.append(temp)
@@ -95,6 +99,8 @@ class Calculator(object):
                     while temp_stack[-1] != '(':
                         output.append(temp_stack.pop())
                     temp_stack.pop()
+                elif temp == "ans":
+                    output.append(self.previous_answer)
                 else:
                     if temp_stack:
                         if temp_stack[-1] == '(':
@@ -133,10 +139,11 @@ class Calculator(object):
         answer = self.calculate_expressions()
         self.previous_answer = answer
         self.clear_stack()
-        print(float(answer))
-        return float(answer)
+        print(answer)
+        return answer
 
 
 if __name__ == "__main__":
     calculator = Calculator()
     calculator.execute_it("1+1")
+    calculator.execute_it("ans+1")

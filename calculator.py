@@ -5,6 +5,7 @@ import sys
 
 if __name__ == "__main__":
     calculator = math_cal.MathExpressionsCal()
+    print("********************\npyCalculator ver 0.1\n********************")
     while True:
         expressions = input("")
         if expressions == "exit":
@@ -13,3 +14,4 @@ if __name__ == "__main__":
             os.system('cls')
         else:
             calculator.execute_it(expressions)
+            print('*'*8)

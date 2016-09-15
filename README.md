@@ -19,3 +19,7 @@ pyCalculator is a little practice to test my basic skills of programming a pytho
  add "ans" to call the previous answer
  
  improved the interface
+
+- update-2016/9/15
+
+ change the file structure
